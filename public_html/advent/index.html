@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Advent</title>
+ <link rel="stylesheet" type="text/css" href="/advent/assets/css/style.css"/>
+</head>
+<body>
+
+<?php
+ $date_now = date("Y-m-d"); // this format is string comparable
+
+echo $date_now;
+    }
+  ?>
+  <div class="container">
+  <div class="row">
+    <div class="column">
+      <img src="/advent/assets/images/9.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow">
+    </div>
+    <div class="column">
+      <img src="/advent/assets/images/2.jpg" onclick="openModal();currentSlide(2)" class="hover-shadow">
+    </div>
+    <div class="column">
+      <img src="/advent/assets/images/23.jpg" onclick="openModal();currentSlide(3)" class="hover-shadow">
+    </div>
+    <div class="column">
+      <img src="/advent/assets/images/17.jpg" onclick="openModal();currentSlide(4)" class="hover-shadow">
+    </div>
+    <div class="column">
+      <img src="/advent/assets/images/13.jpg" onclick="openModal();currentSlide(5)" class="hover-shadow">
+    </div>
+    <div class="column">
+      <img src="/advent/assets/images/4.jpg" onclick="openModal();currentSlide(6)" class="hover-shadow">
+    </div>
+    <div class="column">
+      <img src="/advent/assets/images/6.jpg" onclick="openModal();currentSlide(7)" class="hover-shadow">
+    </div>
+    <div class="column">
+      <img src="/advent/assets/images/11.jpg" onclick="openModal();currentSlide(8)" class="hover-shadow">
+    </div>
+    <div class="column">
+      <img src="/advent/assets/images/1.jpg" onclick="openModal();currentSlide(9)" class="hover-shadow expired"">
+    </div>
+    <div class="column">
+      <img src="/advent/assets/images/19.jpg" onclick="openModal();currentSlide(10)" class="hover-shadow">
+    </div>
+    <div class="column">
+      <img src="/advent/assets/images/21.jpg" onclick="openModal();currentSlide(11)" class="hover-shadow">
+    </div>
+    <div class="column">
+      <img src="/advent/assets/images/15.jpg" onclick="openModal();currentSlide(12)" class="hover-shadow">
+    </div>
+    <div class="column">
+      <img src="/advent/assets/images/7.jpg" onclick="openModal();currentSlide(13)" class="hover-shadow">
+    </div>
+    <div class="column">
+      <img src="/advent/assets/images/14.jpg" onclick="openModal();currentSlide(14)" class="hover-shadow">
+    </div>
+    <div class="column">
+      <img src="/advent/assets/images/5.jpg" onclick="openModal();currentSlide(15)" class="hover-shadow">
+    </div>
+    <div class="column">
+      <img src="/advent/assets/images/22.jpg" onclick="openModal();currentSlide(16)" class="hover-shadow">
+    </div>
+    <div class="column">
+      <img src="/advent/assets/images/18.jpg" onclick="openModal();currentSlide(17)" class="hover-shadow">
+    </div>
+    <div class="column">
+      <img src="/advent/assets/images/3.jpg" onclick="openModal();currentSlide(18)" class="hover-shadow">
+    </div>
+    <div class="column">
+      <img src="/advent/assets/images/8.jpg" onclick="openModal();currentSlide(19)" class="hover-shadow">
+    </div>
+    <div class="column">
+      <img src="/advent/assets/images/24.jpg" onclick="openModal();currentSlide(20)" class="hover-shadow">
+    </div>
+    <div class="column">
+      <img src="/advent/assets/images/10.jpg" onclick="openModal();currentSlide(21)" class="hover-shadow">
+    </div>
+    <div class="column">
+      <img src="/advent/assets/images/20.jpg" onclick="openModal();currentSlide(22)" class="hover-shadow">
+    </div>
+    <div class="column">
+      <img src="/advent/assets/images/12.jpg" onclick="openModal();currentSlide(23)" class="hover-shadow">
+    </div>
+    <div class="column">
+      <img src="/advent/assets/images/16.jpg" onclick="openModal();currentSlide(24)" class="hover-shadow">
+    </div>
+  </div>
+</div>
+  <div id="myModal" class="modal" onclick="closeModal()">
+    <span class="close cursor" onclick="closeModal()">&times;</span>
+    <div class="modal-content">
+
+      <div class="mySlides slide-1">
+        <img class="img_1" src="/advent/assets/images/square/9.png">
+        <img class="img_2" src="/advent/assets/images/square/gift.jpg">
+      </div>
+
+      <div class="mySlides slide-2">
+        <img class="img_1" src="/advent/assets/images/square/2.png">
+        <img class="img_2" src="/advent/assets/images/square/gift.jpg">
+      </div>
+
+      <div class="mySlides slide-3">
+        <img class="img_1" src="/advent/assets/images/square/23.png">
+        <img class="img_2" src="/advent/assets/images/square/gift.jpg">
+      </div>
+
+      <div class="mySlides slide-4">
+        <img class="img_1" src="/advent/assets/images/square/17.png">
+        <img class="img_2" src="/advent/assets/images/square/gift.jpg">
+      </div>
+
+      <div class="mySlides slide-5">
+        <img class="img_1" src="/advent/assets/images/square/13.png">
+        <img class="img_2" src="/advent/assets/images/square/gift.jpg">
+      </div>
+
+      <div class="mySlides slide-6">
+        <img class="img_1" src="/advent/assets/images/square/4.png">
+        <img class="img_2" src="/advent/assets/images/square/gift.jpg">
+      </div>
+
+      <div class="mySlides slide-7">
+        <img class="img_1" src="/advent/assets/images/square/6.png">
+        <img class="img_2" src="/advent/assets/images/square/gift.jpg">
+      </div>
+
+      <div class="mySlides slide-8">
+        <img class="img_1" src="/advent/assets/images/square/11.png">
+        <img class="img_2" src="/advent/assets/images/square/gift.jpg">
+      </div>
+
+      <div class="mySlides slide-9">
+        <img class="img_1" src="/advent/assets/images/square/1.png">
+        <img class="img_2" src="/advent/assets/images/square/gift.jpg">
+      </div>
+
+      <div class="mySlides slide-10">
+        <img class="img_1" src="/advent/assets/images/square/19.png">
+        <img class="img_2" src="/advent/assets/images/square/gift.jpg">
+      </div>
+
+      <div class="mySlides slide-11">
+        <img class="img_1" src="/advent/assets/images/square/21.png">
+        <img class="img_2" src="/advent/assets/images/square/gift.jpg">
+      </div>
+
+      <div class="mySlides slide-12">
+        <img class="img_1" src="/advent/assets/images/square/15.png">
+        <img class="img_2" src="/advent/assets/images/square/gift.jpg">
+      </div>
+
+      <div class="mySlides slide-13">
+        <img class="img_1" src="/advent/assets/images/square/7.png">
+        <img class="img_2" src="/advent/assets/images/square/gift.jpg">
+      </div>
+
+      <div class="mySlides slide-14">
+        <img class="img_1" src="/advent/assets/images/square/14.png">
+        <img class="img_2" src="/advent/assets/images/square/gift.jpg">
+      </div>
+
+      <div class="mySlides slide-15">
+        <img class="img_1" src="/advent/assets/images/square/5.png">
+        <img class="img_2" src="/advent/assets/images/square/gift.jpg">
+      </div>
+
+      <div class="mySlides slide-16">
+        <img class="img_1" src="/advent/assets/images/square/22.png">
+        <img class="img_2" src="/advent/assets/images/square/gift.jpg">
+      </div>
+
+      <div class="mySlides slide-17">
+        <img class="img_1" src="/advent/assets/images/square/18.png">
+        <img class="img_2" src="/advent/assets/images/square/gift.jpg">
+      </div>
+
+      <div class="mySlides slide-18">
+        <img class="img_1" src="/advent/assets/images/square/3.png">
+        <img class="img_2" src="/advent/assets/images/square/gift.jpg">
+      </div>
+
+      <div class="mySlides slide-19">
+        <img class="img_1" src="/advent/assets/images/square/8.png">
+        <img class="img_2" src="/advent/assets/images/square/gift.jpg">
+      </div>
+
+      <div class="mySlides slide-20">
+        <img class="img_1" src="/advent/assets/images/square/24.png">
+        <img class="img_2" src="/advent/assets/images/square/gift.jpg">
+      </div>
+
+      <div class="mySlides slide-21">
+        <img class="img_1" src="/advent/assets/images/square/10.png">
+        <img class="img_2" src="/advent/assets/images/square/gift.jpg">
+      </div>
+
+      <div class="mySlides slide-22">
+        <img class="img_1" src="/advent/assets/images/square/20.png">
+        <img class="img_2" src="/advent/assets/images/square/gift.jpg">
+      </div>
+
+      <div class="mySlides slide-23">
+        <img class="img_1" src="/advent/assets/images/square/12.png">
+        <img class="img_2" src="/advent/assets/images/square/gift.jpg">
+      </div>
+
+      <div class="mySlides slide-24">
+        <img class="img_1" src="/advent/assets/images/square/16.png">
+        <img class="img_2" src="/advent/assets/images/square/gift.jpg">
+      </div>
+
+
+
+      <div class="caption-container">
+        <p id="caption"></p>
+      </div>
+    </div>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="/advent/assets/js/masonry.pkgd.min.js"></script>
+  <script src="/advent/assets/js/imagesloaded.pkgd.min.js"></script>
+  <script src="/advent/assets/js/script.js"></script>
+
+  <script>
+  $(document).ready(function() {
+    $('.container').imagesLoaded().progress( function() {
+      $('.row').masonry({
+        itemSelector: '.column',
+        columnWidth: 16
+      });
+    });
+  });
+  </script>
+  </body>
+  </html>

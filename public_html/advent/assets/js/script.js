@@ -2,8 +2,8 @@ function openModal() {
   document.getElementById('myModal').style.display = "block";
   $('.img_1').addClass('rotateLeft');
   $('.img_2').addClass('rotateRight');
-  document.getElementById('expiredPopup').style.bottom = "-240px";
-  document.getElementById('futurePopup').style.bottom = "-240px";
+  document.getElementById('expiredPopup').style.bottom = "-250px";
+  document.getElementById('futurePopup').style.bottom = "-250px";
 }
 
 function closeModal() {
@@ -15,13 +15,13 @@ function closeModal() {
 function expired() {
   console.log("Expired");
   document.getElementById('expiredPopup').style.bottom = "0px";
-  document.getElementById('futurePopup').style.bottom = "-240px";
+  document.getElementById('futurePopup').style.bottom = "-250px";
 }
 
 function future() {
   console.log("Due in x days");
   document.getElementById('futurePopup').style.bottom = "0px";
-  document.getElementById('expiredPopup').style.bottom = "-240px";
+  document.getElementById('expiredPopup').style.bottom = "-250px";
 }
 
 

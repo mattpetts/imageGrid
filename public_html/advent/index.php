@@ -1,19 +1,43 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Advent</title>
+<link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Oxygen:400,700" rel="stylesheet">
  <link rel="stylesheet" type="text/css" href="/advent/assets/css/style.css"/>
+ <script src="/advent/assets/js/snowstorm-min.js"></script>
+ <script>
+  snowStorm.autoStart = true;
+  snowStorm.followMouse = false;
+  snowStorm.snowColor = '#f1f1f1';   // blue-ish snow!?
+  snowStorm.flakesMaxActive = 96;    // show more snow on screen at once
+  snowStorm.useTwinkleEffect = true; // let the snow flicker in and out of view
+</script>
 </head>
 <body>
 
 <?php
-// $date_now = date("j-m-y");
-$date_now  = '10-12-17'
+// $date_now = date("d-m-y");
+$date_now  = '09-12-17'
 ?>
+<div class="auto-container">
+  <div class="heading">
+    <p id="heading">24 Days of Christmas</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat, click on the door to reveal the day's subscription gift!</p>
+    <div class="giftBtn">
+      <img src="/advent/assets/images/btn-top.jpg"/>
+      <a href="#">Click for todays gift</a>
+    </div>
+    <div style="clear:both"></div>
+  </div>
   <div class="container">
   <div class="row">
-    <div class="column">
-      <img src="/advent/assets/images/9.jpg" onclick="<?php if ($date_now == '09-12-17') : ?>openModal();currentSlide(1) <?php endif; ?><?php if ($date_now > '09-12-17') : ?>expired(); <?php endif; ?><?php if ($date_now < '09-12-17') : ?>future(); <?php endif; ?>" class="<?php if ($date_now > '09-12-17') : ?>expired<?php endif; ?>">
+    <div class="column <?php if ($date_now == '09-12-17') : ?>currentDay<?php endif; ?>">
+      <img src="/advent/assets/images/9.jpg"
+        onclick="<?php if ($date_now == '09-12-17') : ?>openModal();currentSlide(1)<?php elseif ($date_now > '09-12-17') : ?>expired();<?php elseif ($date_now < '09-12-17') : ?>future();<?php endif; ?>"
+        class="  <?php if ($date_now > '09-12-17') : ?>expired<?php elseif ($date_now < '09-12-17') : ?>future<?php endif; ?>"
+      >
     </div>
     <div class="column">
       <img src="/advent/assets/images/2.jpg" onclick="<?php if ($date_now == '02-12-17') : ?>openModal();currentSlide(2) <?php endif; ?><?php if ($date_now > '02-12-17') : ?>expired(); <?php endif; ?><?php if ($date_now < '02-12-17') : ?>future(); <?php endif; ?>" class="<?php if ($date_now > '02-12-17') : ?>expired<?php endif; ?>">
@@ -85,14 +109,15 @@ $date_now  = '10-12-17'
       <img src="/advent/assets/images/16.jpg" onclick="<?php if ($date_now == '16-12-17') : ?>openModal();currentSlide(24)<?php endif; ?><?php if ($date_now > '16-12-17') : ?>expired(); <?php endif; ?><?php if ($date_now < '16-12-17') : ?>future(); <?php endif; ?>" class="<?php if ($date_now > '16-12-17') : ?>expired<?php endif; ?>">
     </div>
   </div>
+</div>
   <div class="popup" id="expiredPopup">
     <div class="popup-inner">
-      <p>This offer is expired</p>
+      <p>This offer has <span>expired</span></p>
     </div>
   </div>
   <div class="popup" id="futurePopup">
     <div class="popup-inner">
-      <p>This offer is not yet available </p>
+      <p>This offer is <span>not available</span> yet </p>
     </div>
   </div>
 </div>
@@ -232,7 +257,6 @@ $date_now  = '10-12-17'
   <script src="/advent/assets/js/masonry.pkgd.min.js"></script>
   <script src="/advent/assets/js/imagesloaded.pkgd.min.js"></script>
   <script src="/advent/assets/js/script.js"></script>
-
   <script>
   $(document).ready(function() {
     $('.container').imagesLoaded().progress( function() {
